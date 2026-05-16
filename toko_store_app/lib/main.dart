@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
-import '../models/todo.dart'; 
 import 'screen/login_screen.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import '../models/cart_item.dart'; 
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Hive.initFlutter();
-  Hive.registerAdapter(TodoAdapter());
-
-  await Hive.openBox('users');
-  await Hive.openBox('session'); 
+  Hive.registerAdapter(CartItemAdapter());
+  
+  await Hive.openBox<CartItem>('cartBox');
   runApp(MainApp());
 }
 

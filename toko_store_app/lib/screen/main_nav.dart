@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
+import 'home_screen.dart';   
+import 'profile_screen.dart';   
 
 class MainNav extends StatefulWidget {
   const MainNav({super.key});
@@ -11,7 +13,6 @@ class MainNav extends StatefulWidget {
 class _MainNavState extends State<MainNav> {
   int _selectedIndex = 0;
 
-  // KONFIRMASI KELUAR
   Future<bool> _showExitDialog() async {
     return await showDialog<bool>(
           context: context,
@@ -56,10 +57,11 @@ class _MainNavState extends State<MainNav> {
         }
       },
       child: Scaffold(
-        body: IndexedStack(index: _selectedIndex, children: [
-          
-
-
+        body: IndexedStack(
+          index: _selectedIndex,
+          children: const [
+            HomeScreen(),
+            ProfileScreen(),
           ],
         ),
         bottomNavigationBar: BottomNavigationBar(
