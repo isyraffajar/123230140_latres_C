@@ -63,7 +63,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
               ),
               const SizedBox(height: 8),
               const Text(
-                'Mahasiswa Informatika UPN "Veteran" Yogyakarta yang siap menyelesaikan tugas praktikum mobile storage ini dengan baik.',
+                'Anjay Mabar',
                 style: TextStyle(color: Colors.grey),
               ),
               const SizedBox(height: 32),
